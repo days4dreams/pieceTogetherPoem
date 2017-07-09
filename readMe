@@ -1,0 +1,117 @@
+Playing with loops in C#. Can you figure out what poemBlock will print? /* Practise for reading for and while loops */
+
+
+Each button triggers an action.
+The result of the action is the update of the myLabel TextBlock.
+
+Each of the four event handlers contain a method;
+Button1 runs a simple math calculation and returns the output to the TextBlock
+Button2 contains an if/else statement that checks an integer variable called x to see if it’s equal to 10.
+Button3 contains a conditional test.
+Button4 contains two loops; the first is a while loop, which repeats the statements inside the brackets as long as the condition is true (do something while this is true). The second one is a for loop. 
+Button5 concatenates a string into a sentence using loops.
+
+Working with loops
+Practise reading loops in C#. 
+
+Can you figure out what poemBlock will print?
+
+// EXAMPLE ONE STARTS
+
+int x = 0;
+            string poem = "";
+
+            while ( x < 4)
+            {
+                poem = poem + "a";
+
+                if (x < 1)
+                {
+                    poem = poem + " ";
+                }
+
+                poem = poem + "n";
+
+                if (x > 1)
+                {
+                    poem = poem + " oyster";
+                    x = x + 2;
+                }
+
+                if (x == 1)
+                {
+                    poem = poem + "noys ";
+                }
+
+                if ( x < 1)
+                {
+                    poem = poem + "oise ";
+                }
+
+                x = x + 1;
+            }
+            poemBlock.Text = poem;
+
+//ENDS
+
+//EXAMPLE TWO STARTS
+
+string result = “”;
+int x = 3;
+// declare an empty string, assign x the value of 3
+
+while (x > 0) 
+{
+//whilst x is greater than 0, do this
+
+  If (x > 2) {
+  result = result + “a”;
+  }
+// test if x is greater than 2. The first time though, x is equal to 3, so the condition is true.
+
+  x = x - 1;
+  result = result + “-“;
+//this statement makes x equal to 2 the first time through and 1 the second time through (no further conditionals)
+
+  If (x ==2) {
+  result = result + “b c”;
+  }
+
+  If (x ==1) {
+  result = result + “d”;
+  x = x -1;
+  }
+
+} //end while loop
+
+Output.text = result;
+// ENDS
+
+Running the loop;
+
+x = 3 , result reads “”.
+While statement tests if x is greater than 0, this is true, so continues.
+If statement tests is x is greater 2, this is true, so statement runs.
+Results becomes “a”.
+1 is deducted from x, x = 2.
+- is added to result, Result becomes “a-“.
+If statement tests if x is equal to 2, this is true, to statement runs.
+Result becomes “a-b c”.
+If statement tests if x is equal to 1, this is false. 
+One loop complete. Return to top of loop. *loop continues to test until statement is false*
+While statement tests if x is greater than 0, this is true, so continues.
+If statement tests is x is greater 2, this is false, statement does not run.
+1 is deducted from x, x = 1.
+- is added to result, Result becomes “a-b c-“.
+If statement tests if x is equal to 2, this is false, statement does not run.
+If statement tests if x is equal to 1, this is true, statement runs.
+d is added to result, result becomes “a-b c-d”.
+1 is deducted from x, x = 0.
+Two loops complete. Return to top of loop. *loop continues to test until statement is false*
+While statement tests if x is greater than 0, this is false, so exits loop.
+Output prints result to screen.
+
+
+
+
+
